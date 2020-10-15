@@ -18,7 +18,7 @@
 #   printPORTx f OR printPINx f 
 #       With x as the port or pin (A,B,C,D)
 #       With f as a format option which can be: [d] decimal, [x] hexadecmial (default), [t] binary 
-#       Example: printPORTC d
+#       Example: printPORTC   d
 #   printDDRx
 #       With x as the DDR (A,B,C,D)
 #       Example: printDDRB
