@@ -1,6 +1,13 @@
 /*	Author:  hsu019 Huapei Su
  *  Partner(s) Name: none
  *	Lab Section: 023
+ *	Assignment: Lab #2  Exercise #1
+ *	Exercise Description: [optional - include for your own ben
+ */
+
+/*	Author:  hsu019 Huapei Su
+ *  Partner(s) Name: none
+ *	Lab Section: 023
  *	Assignment: Lab #2  Exercise #4
  *	Exercise Description: [optional - include for your own benefit]
  *
@@ -30,25 +37,27 @@ while(1) {
 
 		total = tmpA + tmpB + tmpC;
 
-		if (total > 140) { 
+		if (total > 140) {
 			tmpD = (tmpD & 0xFE) | 0x01;
 		}
 
-		if (tmpA > tmpB)
+		//PORTD = tmpD;
+		
+		if (tmpA > tmpC)
 		{
-			if((tmpA - tmpB) > 80){
+			if((tmpA - tmpC) > 80){
 				tmpD = (tmpD & 0xFD) | 0x02;
 			}
 		}
 		else{
-			if((tmpB - tmpA) > 80){
+			if((tmpC - tmpA) > 80){
 				tmpD = (tmpD & 0xFD) | 0x02;
 			}
 		}
-		
+
 		tmpD = (tmpD & 0x03) | (total & 0xFC);
-		
-		PORTD = tmpD;	
+
+		PORTD = tmpD;
 	}
     return 1;
 }

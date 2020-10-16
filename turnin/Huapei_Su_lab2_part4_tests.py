@@ -15,17 +15,17 @@
 # that they are not ran in isolation but in the order shown and the state of the device is not reset or 
 # altered in between executions (unless preconditions are used).
 tests = [ {'description': 'This test will run first.',
-    'steps': [ {'inputs': [('PINA',0x00),('PINB',0x00),('PINC',0x00)], 'iterations': 1 } ],
-    'expected': [('PORTD',0x04)],
+    'steps': [ {'inputs': [('PINA',0x60),('PINB',0x02),('PINC',0x21)], 'iterations': 1 } ],
+    'expected': [('PORTD',0x80)],
     },
     {'description': 'This test will run second.',
     'steps': [ 
-        {'inputs': [('PINA',0x10),('PINB',0x10),('PINC',0x10)], 'iterations': 1}, ],
-    'expected': [('PORTD',0xC1)],
+        {'inputs': [('PINA',0x30),('PINB',0x30),('PINC',0x30)], 'iterations': 1}, ],
+    'expected': [('PORTD',0x91)],
     },
     {'description': 'This is test will run third.',
-    'steps': [ {'inputs': [('PINA',0x11),('PINB',0x00),('PINC',0x04)], 'iterations': 1 } ],
-    'expected': [('PORTD',0x86)],
+    'steps': [ {'inputs': [('PINA',0x90),('PINB',0x08),('PINC',0x0B)], 'iterations': 1 } ],
+    'expected': [('PORTD',0xA3)],
     },
     ]
 
