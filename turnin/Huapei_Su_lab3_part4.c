@@ -25,8 +25,8 @@ while(1) {
 		upper = 0x00;
 		lower = 0x00;
 
-		lower = tmpA >> 4;
-		upper = tmpA << 4;
+		lower = (tmpA & 0xF0) >> 4;
+		upper = (tmpA & 0x0F) << 4;
 
 		PORTB = lower;
 		PORTC = upper;	
